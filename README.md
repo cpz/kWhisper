@@ -1,6 +1,6 @@
 # Key Whisper (short: kWhisper)
 
-![kWhisper logo](https://raw.githubusercontent.com/cpz/kWhisper/master/images/extension-logo.png)
+<img src="https://github.com/cpz/kWhisper/blob/main/images/extension-logo.png" width="200" height="200">
 
 [kWhisper](https://marketplace.visualstudio.com/items?itemName=cpz.kWhisper "kWhisper on Visual Studio Marketplace") is extension for Azure DevOps Pipelines which gives you possibility to send messages about your build/release process or custom mesages to Keybase.io.
 
@@ -45,4 +45,4 @@ There are some basic predefined features both for build and release tasks.
 
 Key Whisper not affiliated with Keybase.io and Keybase Logo rights belongs to them.
 
-![kWhisper logo small](https://raw.githubusercontent.com/cpz/kWhisper/master/images/extension-logo-small.png)
+![kWhisper logo small](https://raw.githubusercontent.com/cpz/kWhisper/main/images/extension-logo-small.png)
