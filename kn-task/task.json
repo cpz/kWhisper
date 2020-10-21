@@ -1,0 +1,188 @@
+{
+  "id": "2eadfaf9-1337-4a51-9815-6935b5aa39fe",
+  "name": "kwhisper",
+  "friendlyName": "Key Whisper",
+  "description": "Key Whisper is extension for Azure DevOps Pipelines which gives you possibility to send messages about your build/release process or custom mesages to Keybase.io.",
+  "author": "Konstantin 'cpz' L.",
+  "helpMarkDown": "https://github.com/cpz/kwhisper",
+  "category": "Utility",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "demands": [],
+  "version": {
+    "Major": "1",
+    "Minor": "0",
+    "Patch": "31"
+  },
+  "minimumAgentVersion": "1.95.0",
+  "instanceNameFormat": "Key Whisper",
+  "groups": [{
+      "name": "kwhisperGeneral",
+      "displayName": "General Settings",
+      "isExpanded": true
+    },
+    {
+      "name": "kwhisperChannel",
+      "displayName": "Channel Settings",
+      "isExpanded": true
+    },
+    {
+      "name": "kwhisperMessage",
+      "displayName": "Message Settings",
+      "isExpanded": false
+    }
+  ],
+  "inputs": [{
+      "name": "bot_username",
+      "type": "string",
+      "label": "Bot Username",
+      "defaultValue": "qword",
+      "required": true,
+      "groupName": "kwhisperGeneral",
+      "helpMarkDown": "Username of bot which you registered."
+    },
+    {
+      "name": "bot_paper_key",
+      "type": "string",
+      "label": "Bot Paper Key",
+      "defaultValue": "digital gangster llc 4 lyfe",
+      "required": true,
+      "groupName": "kwhisperGeneral",
+      "helpMarkDown": "Bot Paper Key which you generated."
+    },
+    {
+      "name": "bot_type",
+      "type": "boolean",
+      "label": "Bot Team",
+      "defaultValue": false,
+      "required": true,
+      "groupName": "kwhisperChannel",
+      "helpMarkDown": "Enable it to switch bot to write in to team channel."
+    },
+    {
+      "name": "bot_personal",
+      "type": "string",
+      "label": "Username",
+      "defaultValue": "qword",
+      "required": true,
+      "groupName": "kwhisperChannel",
+      "helpMarkDown": "If you want the bot to write to someone then type their username. (e.g. qword)"
+    },
+    {
+      "name": "bot_team",
+      "type": "string",
+      "label": "Team Username",
+      "defaultValue": "kwhisper",
+      "required": false,
+      "groupName": "kwhisperChannel",
+      "helpMarkDown": "Your team username."
+    },
+    {
+      "name": "bot_team_channel",
+      "type": "string",
+      "label": "Team Channel",
+      "defaultValue": "general",
+      "required": false,
+      "groupName": "kwhisperChannel",
+      "helpMarkDown": "Team Channel which will be used by Bot to write."
+    },
+    {
+      "name": "bot_taskstatus",
+      "type": "boolean",
+      "label": "Task Status",
+      "defaultValue": false,
+      "required": false,
+      "groupName": "kwhisperMessage",
+      "helpMarkDown": "Adds information about task status (e.g Failed, Succeeded and etc)."
+    },
+    {
+      "name": "bot_project",
+      "type": "boolean",
+      "label": "Project",
+      "defaultValue": false,
+      "required": false,
+      "groupName": "kwhisperMessage",
+      "helpMarkDown": "Adds project URL (e.g https://yourteam.visualstudio.com/)."
+    },
+    {
+      "name": "bot_release",
+      "type": "boolean",
+      "label": "Release",
+      "defaultValue": false,
+      "required": false,
+      "groupName": "kwhisperMessage",
+      "helpMarkDown": "Adds release name to message."
+    },
+    {
+      "name": "bot_reason",
+      "type": "boolean",
+      "label": "Reason",
+      "defaultValue": false,
+      "required": false,
+      "groupName": "kwhisperMessage",
+      "helpMarkDown": "Adds information about event that caused the build to run to message."
+    },
+    {
+      "name": "bot_buildnum",
+      "type": "boolean",
+      "label": "Build Number",
+      "defaultValue": false,
+      "required": false,
+      "groupName": "kwhisperMessage",
+      "helpMarkDown": "Adds build number to message."
+    },
+    {
+      "name": "bot_queuedby",
+      "type": "boolean",
+      "label": "Queued by",
+      "defaultValue": false,
+      "required": false,
+      "groupName": "kwhisperMessage",
+      "helpMarkDown": "Adds information about who queued the build to message."
+    },
+    {
+      "name": "bot_react",
+      "type": "boolean",
+      "label": "Reacts to Message",
+      "defaultValue": false,
+      "required": false,
+      "groupName": "kwhisperMessage",
+      "helpMarkDown": "Enable it if you want add react by bot to message which he sent."
+    },
+    {
+      "name": "bot_status_react",
+      "type": "boolean",
+      "label": "Status React",
+      "defaultValue": false,
+      "required": false,
+      "groupName": "kwhisperMessage",
+      "helpMarkDown": "Adds task status react to message."
+    },
+    {
+      "name": "bot_custom_react",
+      "type": "string",
+      "label": "Custom React",
+      "defaultValue": ":thinking_face:",
+      "required": false,
+      "groupName": "kwhisperMessage",
+      "helpMarkDown": "Adds your own react to mesage (e.g. :thinking_face:)"
+    },
+    {
+      "name": "bot_message",
+      "type": "string",
+      "label": "Message Text",
+      "defaultValue": "",
+      "required": false,
+      "groupName": "kwhisperMessage",
+      "helpMarkDown": "Adds your custom message text to message."
+    }
+  ],
+  "execution": {
+    "Node": {
+      "target": "task.js",
+      "argumentFormat": ""
+    }
+  }
+}

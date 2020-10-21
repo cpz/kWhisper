@@ -1,0 +1,58 @@
+{
+    "manifestVersion": 1,
+    "id": "kwhisper",
+    "publisher": "cpz",
+    "version": "1.0.31",
+    "name": "Key Whisper",
+    "description": "Key Whisper is extension for Azure DevOps Pipelines which gives you possibility to send messages about your build/release process or custom mesages to Keybase.io.",
+    "public": false,
+    "demands": ["api-version/3.0"],
+    "categories": ["Azure Pipelines"],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/cpz/kwhisper"
+    },
+    "icons": {
+        "default": "images/extension-logo-small.png",
+        "large":"images/extension-logo.png"
+    },
+    "branding":{
+        "color":"#FFFFFF",
+        "theme":"light"
+     },
+    "content": {
+        "details": {
+            "path": "README.md"
+        },
+        "license": {
+            "path": "LICENSE.md"
+        }
+    },
+    "contributions": [
+        {
+            "id": "keybase-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.task"
+            ],
+            "properties": {
+                "name": "kn-task"
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "kn-task",
+            "addressable": true
+        },
+        {
+            "path": "images",
+            "addressable": true
+        }
+    ]
+}
